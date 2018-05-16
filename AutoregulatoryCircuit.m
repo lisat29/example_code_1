@@ -1,3 +1,7 @@
+% BMEN 6003: Computational Modeling of Physiologic Systems
+% Tetracycline repressor (tetR) Autoregulatory Circuit
+% Lisa Torres
+
 clc;
 clear all;
 close all;
@@ -8,8 +12,10 @@ tau = 75*60; % 75 mins to s
 k = 10*10^-9; % nmol
 t = 1:0.1:2*tau; % s
 
+% coopertivity, 0 being no repression and 5 being the max value
 n = 0:5;
 
+% normalized concentration = concentration / steady state concentration
 x_norm = zeros(length(n),length(t));
 
 for n = 0:5
